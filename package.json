@@ -1,0 +1,25 @@
+{
+  "name": "webpack-module-federation-exmaple",
+  "version": "1.0.0",
+  "description": "initial commit!",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint '**/*.{js,ts,tsx}'",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "prettier '**/*.{json,yaml,md}' --check",
+    "prettier:fix": "prettier '**/*.{json,yaml,md}' --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yceffort/webpack-module-federation-exmaple.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yceffort/webpack-module-federation-exmaple/issues"
+  },
+  "homepage": "https://github.com/yceffort/webpack-module-federation-exmaple#readme",
+  "devDependencies": {
+    "eslint-config-yceffort": "0.0.5"
+  }
+}

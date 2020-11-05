@@ -1,19 +1,10 @@
-import React, { useState, Suspense } from 'react';
-import ReactDOM from 'react-dom';
-
-const Counter = React.lazy(() => import('app2/Counter'));
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 function App() {
-    return (
-        <>
-            <h1>Hello from React component</h1>
-            <Suspense fallback='Loading Counter...'>
-                <Counter
-                    title={'hello, counter'}
-                />
-            </Suspense>
-        </>
-    );
+  return <h1>Hello from second app</h1>
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+export default App
+
+ReactDOM.render(<App />, document.getElementById('root'))

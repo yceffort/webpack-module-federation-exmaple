@@ -8,10 +8,10 @@ module.exports = {
   mode: 'development',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    port: 3002,
+    port: 3001,
   },
   output: {
-    publicPath: 'http://localhost:3002/',
+    publicPath: 'http://localhost:3001/',
   },
   module: {
     rules: [
@@ -27,11 +27,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'app1',
-      library: { type: 'var', name: 'app1' },
-      filename: 'remoteEntry.js',
-      exposes: {
-        './Counter': './src/components/counter/index.jsx',
+      name: 'main',
+      library: { type: 'var', name: 'main' },
+      remotes: {
+        app1: 'app1',
       },
       shared: ['react', 'react-dom'],
     }),
